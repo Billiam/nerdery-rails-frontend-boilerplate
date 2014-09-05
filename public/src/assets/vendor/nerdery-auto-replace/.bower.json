@@ -1,0 +1,7 @@
+{
+  "name": "nerdery-auto-replace",
+  "main": "index.js",
+  "_source": "/home/vagrant/hosts/boilerplate/scripts/js/tools/cache/nerdery-auto-replace",
+  "_target": "*",
+  "_originalSource": "./tools/cache/nerdery-auto-replace"
+}
