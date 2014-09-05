@@ -8,6 +8,13 @@ Bundler.require(*Rails.groups)
 
 module Boilerplate
   class Application < Rails::Application
+
+    # Asset pipeline is disabled in favor of grunt-based assets management
+    config.assets.enabled = false
+
+    # Default asset prefix path to use built files
+    config.relative_url_root = '/build'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
