@@ -23,13 +23,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     override.ssh.forward_agent = true
   end
 
-  
-
   # Setup librarian-puppet
   # uses default puppet module path of /etc/puppet
   config.vm.provision :shell, path: "puppet/shell/main.sh"
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.module_path = "puppet/modules"
+    puppet.options = "--hiera_config /vagrant/hiera.yaml"
   end
 end
